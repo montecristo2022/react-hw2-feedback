@@ -64,7 +64,7 @@ export default class Feedback extends Component {
             positive={this.persentOfPositive()}
           />
           </Section>
-        </div> : <Notifications message={'Станьте первым, кто проголосует'}/>}
+        </div> : <Notifications message={'Стань первым хотя бы где-то, проголосуй!'}/>}
 
   
       </div>

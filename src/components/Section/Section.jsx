@@ -1,5 +1,5 @@
 import styles from '../Feedback/Feedback.module.css'
-
+import PropTypes from 'prop-types';
 
 const Section = ({title, children }) => {
     return (
@@ -9,6 +9,11 @@ const Section = ({title, children }) => {
       </h3>
       {children}
       </section>)
+}
+
+Section.propTypes = {
+    title: PropTypes.string,
+    children: PropTypes.node
 }
 
 export default Section

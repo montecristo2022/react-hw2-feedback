@@ -1,5 +1,6 @@
 import React from "react";
 import styles from '../Feedback/Feedback.module.css'
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({plusGood, plusNeutral, plusBad}) => {
    return <ul className={styles.buttonList}>
@@ -14,5 +15,12 @@ const FeedbackOptions = ({plusGood, plusNeutral, plusBad}) => {
           </button>
         </ul>
 }
+
+FeedbackOptions.propTypes = {
+  plusGood: PropTypes.func,
+  plusNeutral: PropTypes.func,
+  plusBad: PropTypes.func
+}
+
 
 export default FeedbackOptions
