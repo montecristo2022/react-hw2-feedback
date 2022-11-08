@@ -83,3 +83,62 @@ the line are required.
 3. If all steps are successful, the built production version of the project files is 
   sent to the `gh-pages` branch. Otherwise, the script execution log will indicate 
   what the problem is.
+
+
+
+
+
+
+
+
+
+        {/* <h2 className={styles.mainText}>Пожалуйста, оставьте ваш отзыв +_+</h2> */}
+
+
+        {/* <ul className={styles.buttonList}>
+          <button className={styles.button} onClick={this.plusGood}>
+            Хорошо
+          </button>
+          <button className={styles.button} onClick={this.plusNeutral}>
+            Нормально
+          </button>
+          <button className={styles.button} onClick={this.plusBad}>
+            Ужасно
+          </button>
+        </ul> */}
+
+
+
+
+
+
+
+
+
+
+   {/* <h3 className={styles.mainFeedbackText}>
+            Статистика отзывов пользователей 👇
+          </h3> */}
+
+
+
+    {/* <ul>
+            <li className={styles.feedbackText}>
+              Хороших отзывов: {this.state.good}
+            </li>
+            <li className={styles.feedbackText}>
+              Нейтральных отзывов: {this.state.neutral}
+            </li>
+            <li className={styles.feedbackText}>
+              Плохих отзывов: {this.state.bad}
+            </li>
+            <li className={styles.feedbackText}>
+              Общее количество отзывов: {this.totalFeedback()}
+            </li>
+            <li className={styles.feedbackText}>
+              Процент позитивных отзывов:{' '}
+              {this.persentOfPositive()
+                ? `${this.persentOfPositive()} %`
+                : 'в данный момент голоса отсутствуют'}
+            </li>
+          </ul> */}
