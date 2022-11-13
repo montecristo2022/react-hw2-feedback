@@ -11,21 +11,10 @@ export default class Feedback extends Component {
     bad: 0,
   };
 
-  plusGood = () => {
+  plusOneFeedback = state => {
+    console.log(state);
     this.setState(oldState => ({
-      good: oldState.good + 1,
-    }));
-  };
-
-  plusNeutral = () => {
-    this.setState(oldState => ({
-      neutral: oldState.neutral + 1,
-    }));
-  };
-
-  plusBad = () => {
-    this.setState(oldState => ({
-      bad: oldState.bad + 1,
+      [state]: oldState[state] + 1,
     }));
   };
 
@@ -42,31 +31,31 @@ export default class Feedback extends Component {
   };
 
   render() {
+    const options = Object.keys(this.state);
     return (
       <div>
         <Section title={'Пожалуйста, оставьте ваш отзыв +_+'}>
-
-        <FeedbackOptions
-          plusGood={this.plusGood}
-          plusNeutral={this.plusNeutral}
-          plusBad={this.plusBad}
-        />
-</Section>
-
-{this.totalFeedback() ?       <div>
-          <Section title={'Статистика отзывов пользователей 👇'} >
-
-          <Statistics
-            good={this.state.good}
-            neutral={this.state.neutral}
-            bad={this.state.bad}
-            total={this.totalFeedback()}
-            positive={this.persentOfPositive()}
+          <FeedbackOptions
+            plusOneFeedback={this.plusOneFeedback}
+            options={options}
           />
-          </Section>
-        </div> : <Notifications message={'Стань первым хотя бы где-то, проголосуй!'}/>}
+        </Section>
 
-  
+        {this.totalFeedback() ? (
+          <div>
+            <Section title={'Статистика отзывов пользователей 👇'}>
+              <Statistics
+                good={this.state.good}
+                neutral={this.state.neutral}
+                bad={this.state.bad}
+                total={this.totalFeedback()}
+                positive={this.persentOfPositive()}
+              />
+            </Section>
+          </div>
+        ) : (
+          <Notifications message={'Стань первым хотя бы где-то, проголосуй!'} />
+        )}
       </div>
     );
   }

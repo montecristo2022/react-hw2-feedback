@@ -1,19 +1,18 @@
-import styles from '../Feedback/Feedback.module.css'
+import styles from '../Feedback/Feedback.module.css';
 import PropTypes from 'prop-types';
 
-const Section = ({title, children }) => {
-    return (
-        <section>
-    <h3 className={styles.mainFeedbackText}>
-        {title}
-      </h3>
+const Section = ({ title, children }) => {
+  return (
+    <section>
+      <h3 className={styles.mainFeedbackText}>{title}</h3>
       {children}
-      </section>)
-}
+    </section>
+  );
+};
 
 Section.propTypes = {
-    title: PropTypes.string,
-    children: PropTypes.node
-}
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
-export default Section
+export default Section;

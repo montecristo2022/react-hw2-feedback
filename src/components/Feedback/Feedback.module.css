@@ -11,7 +11,7 @@
     background-color: rgb(249, 255, 196);
 }
 
-.button:not(:first-child) {
+.oneButtonContainer:not(:first-child) {
     margin-left: 20px;
 }
 

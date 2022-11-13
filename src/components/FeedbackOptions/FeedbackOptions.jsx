@@ -1,26 +1,30 @@
-import React from "react";
-import styles from '../Feedback/Feedback.module.css'
+import React from 'react';
+import styles from '../Feedback/Feedback.module.css';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({plusGood, plusNeutral, plusBad}) => {
-   return <ul className={styles.buttonList}>
-          <button className={styles.button} onClick={plusGood}>
-            Хорошо
-          </button>
-          <button className={styles.button} onClick={plusNeutral}>
-            Нормально
-          </button>
-          <button className={styles.button} onClick={plusBad}>
-            Ужасно
-          </button>
-        </ul>
-}
+const FeedbackOptions = ({ options, plusOneFeedback }) => {
+  return (
+    <ul className={styles.buttonList}>
+      {options.map(option => {
+        return (
+          <li className={styles.oneButtonContainer} key={option}>
+            <button
+              type="button"
+              onClick={() => plusOneFeedback(option)}
+              className={styles.button}
+            >
+              {option}
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 FeedbackOptions.propTypes = {
-  plusGood: PropTypes.func,
-  plusNeutral: PropTypes.func,
-  plusBad: PropTypes.func
-}
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  plusOneFeedback: PropTypes.func.isRequired,
+};
 
-
-export default FeedbackOptions
+export default FeedbackOptions;
