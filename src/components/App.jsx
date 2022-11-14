@@ -1,4 +1,4 @@
-import Feedback from "./Feedback/Feedback";
+import Feedback from './Feedback/Feedback';
 
 export const App = () => {
   return (
@@ -9,10 +9,10 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
-      <Feedback/>
+      <Feedback />
     </div>
   );
 };

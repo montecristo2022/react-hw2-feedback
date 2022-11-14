@@ -6,6 +6,7 @@ const FeedbackOptions = ({ options, plusOneFeedback }) => {
   return (
     <ul className={styles.buttonList}>
       {options.map(option => {
+        console.log(option);
         return (
           <li className={styles.oneButtonContainer} key={option}>
             <button
